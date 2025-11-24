@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ксения — Репетитор английского</title>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg1: #80DAEB;
+      --bg2: #80DAEB;
+      --accent1:#6ee7b7;
+      --accent2:#7dd3fc;
+      --dark:#1f2937;
+      --card:#ffffffcc;
+      font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, 'Comfortaa', sans-serif;
+    }
+    *{box-sizing:border-box;}
+    body{margin:0;background:linear-gradient(135deg,var(--bg1),var(--bg2));color:var(--dark);min-height:100vh;}
+    .container{max-width:1100px;margin:0 auto;padding:28px;}
+
+    header{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;}
+    .logo{display:flex;align-items:center;gap:14px;}
+    .logo h1{font-family:'Comfortaa', 'Poppins';font-size:20px;margin:0;}
+    nav a{margin-left:14px;text-decoration:none;color:var(--dark);font-weight:600;}
+
+    .hero{display:grid;grid-template-columns:1fr;gap:28px;align-items:center;margin-top:18px;}
+    .card{background:var(--card);backdrop-filter:blur(6px);padding:20px;border-radius:18px;box-shadow:0 6px 30px rgba(0,0,0,0.08);}
+
+    .hero .intro h2{font-family:'Comfortaa';font-size:36px;margin:0 0 8px;}
+    .intro p{margin:0 0 18px;line-height:1.45;}
+    .cta{display:flex;gap:12px;flex-wrap:wrap;}
+    .btn{padding:12px 18px;border-radius:12px;border:0;font-weight:700;cursor:pointer;}
+    .btn-primary{background:linear-gradient(90deg,var(--accent1),var(--accent2));color:#04303a;}
+    .btn-outline{background:transparent;border:2px solid rgba(0,0,0,0.08);}
+
+    section{margin-top:24px;}
+    .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+    .service{padding:14px;border-radius:12px;}
+
+    .testimonials p{margin:0;}
+    footer{margin-top:28px;padding:18px;border-radius:12px;background:#ffffff33;}
+
+    .chat-bubble{position:fixed;right:22px;bottom:22px;background:linear-gradient(180deg,var(--accent2),var(--accent1));padding:10px 14px;border-radius:999px;display:flex;gap:10px;align-items:center;box-shadow:0 10px 30px rgba(0,0,0,0.18);cursor:pointer;}
+    .chat-bubble img{width:44px;height:44px;border-radius:12px;}
+
+    @media(max-width:900px){
+      .grid3{grid-template-columns:1fr;}
+      .cta{flex-direction:column;}
+      .btn{width:100%;}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">
+        <img src="ksenia.jpg" alt="Фото Ксении" style="width:70px;height:70px;border-radius:50%;object-fit:cover;margin-right:15px;">
+        <h1>Увлекательный английский для детей от 7 до 14 лет</h1>
+      </div>
+      <nav aria-label="Главное меню">
+        <a href="#about">Обо мне</a>
+        <a href="#services">Услуги</a>
+        <a href="#contact">Контакты</a>
+      </nav>
+    </header>
+
+    <main class="hero">
+      <div class="intro card">
+        <h2>Увлекательные уроки английского с Ксенией</h2>
+        <p>Я — Ксения, онлайн-репетитор для детей. Я влюбляю учеников в английский язык и онлайн формат всего за 4 недели, благодаря интерактивным и креативным занятиям.<br><br>
+* Помогу подготовить ребенка к английскому в школе за 3 месяца;<br>
+* Помогу повысить успеваемость в школе;<br>
+* Помогу разобраться в грамматике английского языка и полюбить её;<br>
+* Ученики среднего звена уверенно разбираются в школьном курсе грамматики и становятся «звездами» в классе, и поступают в профильные школы и колледжи.</p>
+        <div class="cta">
+          <button class="btn btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Записаться на пробный урок</button>
+          <button class="btn btn-outline" onclick="window.location='#services'">Мои занятия</button>
+        </div>
+        <div style="margin-top:14px;font-size:14px;color:#334155">Форматы: онлайн индивидуально и в мини-группе · Подготовка к школе. Подготовка к ВПР</div>
+      </div>
+    </main>
+
+    <section id="about" class="card">
+      <h3>Коротко обо мне</h3>
+      <p>Меня зовут Ксения. Я работаю с детьми 7-14 лет, использую игровые техники, сторителлинг и индивидуальный подход. Люблю, когда ребенок уходит с урока вдохновлённым и уверенным.</p>
+    </section>
+
+    <section id="services">
+      <h3>Услуги</h3>
+      <div class="grid3">
+        <div class="service card">
+          <h4>Индивидуальные занятия</h4>
+          <p>Уроки 45 минут, программа под уровень ребёнка, акцент на говорение и понимание.<br><strong>1600 ₽ / акад. час</strong></p>
+        </div>
+        <div class="service card">
+          <h4>Групповые занятия</h4>
+          <p>Весёлые мини-группы для практики общения и игр — идеально для 7–14 лет.<br><strong>1000 ₽ / час</strong></p>
+        </div>
+        <div class="service card">
+          <h4>Подготовка к школе и ВПР</h4>
+          <p>Подготовка к контрольным, помощь с домашними заданиями.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card testimonials">
+      <h3>Отзывы</h3>
+      <p>«Ксения вдохновила моего сына — он стал читать на английском и с удовольствием делает домашку!» — Марина, мама 9-летнего Ивана.</p>
+    </section>
+
+    <section id="contact" class="card">
+      <h3>Контакты</h3>
+      <p>Готовы начать? Напишите или позвоните — я отвечу быстро.</p>
+      <p><strong>Телефон / WhatsApp:</strong> <a href="https://wa.me/79213871301" style="color:#0284c7;text-decoration:underline;">+7 (921) 387-13-01</a><br>
+         <strong>VK:</strong> <a href="https://vk.com/ksenia.kazeko" target="_blank" rel="noopener" style="color:#0284c7;text-decoration:underline;">ksenia.kazeko</a></p>
+
+      <div style="margin:16px 0;padding:12px;background:#f0fdf4;border-radius:10px;border:1px solid #bbf7d0;">
+        <label style="display:flex;align-items:center;gap:10px;cursor:pointer;font-size:14px;color:#065f46;">
+          <input type="checkbox" id="privacy-checkbox" required style="width:18px;height:18px;cursor:pointer;">
+          <span>Согласен с <a href="#" style="color:#0284c7;text-decoration:underline;" onclick="alert('Здесь будет размещена Политика конфиденциальности.');return false;">обработкой персональных данных</a></span>
+        </label>
+      </div>
+
+      <form onsubmit="event.preventDefault(); if(!document.getElementById('privacy-checkbox').checked){alert('Пожалуйста, дайте согласие на обработку персональных данных.');return;} alert('Спасибо! Я скоро свяжусь с вами.');" style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+        <input required placeholder="Имя" />
+        <input required placeholder="Телефон или e-mail" />
+        <textarea placeholder="Коротко: что нужно / удобное время" style="grid-column:1 / -1;min-height:90px"></textarea>
+        <button type="submit" class="btn btn-primary" style="grid-column:1 / -1">Отправить</button>
+      </form>
+    </section>
+
+    <footer>
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;font-size:13px;color:#334155">
+        <div>© Ксения — репетитор английского</div>
+        <div>WhatsApp / Телефон: <strong>+7 (921) 387-13-01</strong> • <a href="https://vk.com/ksenia.kazeko" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;">VK</a></div>
+      </div>
+    </footer>
+  </div>
+
+  <div class="chat-bubble" role="button" aria-label="Написать в WhatsApp" onclick="window.open('https://wa.me/79213871301', '_blank')">
+    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='88' height='88' viewBox='0 0 88 88'><rect rx='14' width='88' height='88' fill='%2380DAEB'/><circle cx='44' cy='44' r='30' fill='%2325D366'/><path d='M28 58L32 42L42 52L58 32L62 48L42 68Z' fill='white'/></svg>" alt="WhatsApp">
+    <div style="font-weight:700">Написать</div>
+  </div>
+</body>
+</html>
